@@ -1,0 +1,37 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls d-flex flex-column justify-content-center align-items-center">
+    </div>
+    <!-- //inner banner -->
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb d-flex justify-content-center ">
+            <li class="breadcrumb-item">
+                <a href="index.html" class="m-0">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+        </ol>
+    </nav>
+    <!-- //breadcrumbs -->
+    <!-- Recent Gadgets -->
+    <div class="wthree_pvtits-services align-w3" id="recentgadget">
+        <div class="container">
+            <div class="wthree_pvt_title text-center">
+                <h4 class="w3pvt-title"> Gadgets Gallery.
+                </h4>
+                <p class="sub-title">Some gadget pictures are as listed below.</p>
+            </div>
+            <div class="row text-center">
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+                <div class="row text-center"><img src="{% static 'images/1.jfif' %}" alt="1"/><img src="{% static 'images/2.jfif' %}" alt="2"/><img src="{% static 'images/3.jfif' %}" alt="3"/><img src="{% static 'images/4.jfif' %}" alt="4"/></div><br><br><br>
+            </div>
+        </div>
+    </div>
+    <!-- //Recent Gadgets-->
+{% endblock %}

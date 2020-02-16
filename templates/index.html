@@ -1,0 +1,107 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- banner -->
+    <section class="banner">
+        <!-- banner text -->
+        <div class="container">
+            <div class="banner_text_wthree_pvt">
+                <h3 class="home-banner-w3">Total Gadget Review......
+                                                Be gadgetted every second.
+                </h3>
+
+                <p class="bnr-txt">Know before you buy. Get updated with the latest gadgets. ✌
+
+                </p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                    <option selected>Catagories:</option>
+                                    <option value="1">Recent</option>
+                                    <option value="2">Famous</option>
+                                    <option value="3">Best</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn bg-theme" type="button"><a href="/review/reviews">Go to Reviews?</a></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //banner text -->
+        <!-- banner-bottom -->
+        <div class="banner-bottom-w3ls">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-6">
+                        <div class="bb-img">
+                            <img src="{% static 'images/a2.jpg' %}" class="img-fluid img-thumbnail" alt="" />
+                            <h3>Mobiles</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <div class="bb-img">
+                            <img src="{% static 'images/a1.jpg' %}" class="img-fluid img-thumbnail" alt="" />
+                            <h3>Laptops</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-6 mx-auto mt-sm-0 mt-4">
+                        <div class="bb-img">
+                            <img src="{% static 'images/a3.jpg' %}" class="img-fluid img-thumbnail" alt="" />
+                            <h3>Gears</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //banner-bottom -->
+    </section>
+    <!-- //banner -->
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <!-- Recent Gadgets -->
+    <div class="wthree_pvtits-services align-w3" id="recentgadget">
+        <div class="container">
+            <div class="wthree_pvt_title text-center">
+                <h4 class="w3pvt-title"> Recent Gadgets.
+                </h4>
+                <p class="sub-title">Latest gadgets are listed here with its specifications.</p>
+            </div>
+            <ul class="demo row">
+
+                {% for i in rev  %}
+                <li class="col-lg-4">
+                    <div class="img-grid">
+                        <div class="Portfolio-grid1">
+                            <a href="#gal{{ i.id }}">
+                                <img src="http://127.0.0.1:8000/media/{{ i.img }}" alt=" " class="img-fluid" />
+                            </a>
+                        </div>
+                        <div class="port-desc text-center">
+                            <h6 class="main-title-w3pvt text-center">{{ i.name }}</h6>
+                            
+                        </div>
+                    </div>
+                </li>
+                  <div id="gal{{ i.id }}" class="popup-effect animate">
+                <div class="popup">
+                    <img src="http://127.0.0.1:8000/media/{{ i.img }}" alt="Popup Image" class="img-fluid" />
+                    <p class="editContent mt-4">
+                        {{ i.desc }}
+                    </p>
+                    <a href="/{{ i.id }}" class="btn btn-primary btn-block"> Review </a>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+                {% endfor %}
+            </ul>
+            <div class="d-flex justify-content-center">
+                <a href="/gallery/" class="btn w3ls-btn">view more</a>
+            </div>
+        </div>
+    </div>
+    <!-- //Recent Gadgets-->
+{% endblock %}

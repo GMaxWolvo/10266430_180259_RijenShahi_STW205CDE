@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <div class="form-group">
+            <input type="hidden" name="id" class="form-control" value="{{ Reviewss.id }}" readonly>
+        </div>
+        <div class="form-group">
+            <input type="text" name="Gname" class="form-control" value="{{ Reviewss.gadget }}" readonly>
+        </div>
+        <div class="form-group">
+            <input type="text" name="Name" class="form-control" value="{{ request.user }}" placeholder="Name" readonly>
+        </div>
+        <div class="form-group">
+            <input type="email" name="Email" class="form-control" placeholder="Email" value="{{ Reviewss.email }}"
+                   required="">
+        </div>
+    </div>
+    <div class="form-group">
+                                <textarea name="Message" class="form-control" value="{{ Reviewss.comments }}"
+                                          placeholder="Your comment here..."
+                                          required=""></textarea>
+    </div>
+    <button class="btn btn-block btn-primary" type="submit"> Update Review</button>
+</form>
+{% endblock %}
